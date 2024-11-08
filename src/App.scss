@@ -1,0 +1,41 @@
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+
+    h1{
+        letter-spacing: 2px;
+        cursor: default;
+        font-size: 42px;
+        font-weight: bold;
+        background-image: linear-gradient(to right, #8e44ad, #e74c3c, #2ecc71);
+        -webkit-background-clip: text;
+        color: transparent;
+
+        &:hover{
+            color: transparent;
+            background-image: linear-gradient(135deg, #2ecc71, #e74c3c, #8e44ad);
+        }
+    }
+    h6 {
+        color: red;
+    }
+
+    button {
+        padding: 15px 35px;
+        background: transparent;
+        border-radius: 5px;
+        border: 2px solid greenyellow;
+        outline: none!important;
+        color: greenyellow;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            background: greenyellow;
+            color: #000;
+        }
+    }
+}
