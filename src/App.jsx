@@ -5,6 +5,7 @@ import Login from './Login/Login';
 import Register from './Register/Register';
 import './App.scss';
 import ForgotPassword from './ForgotPassword/ForgotPassword';
+import NewPaswword from './NewPassword/NewPassword';
 
 const App = () => {
     const location = useLocation();
@@ -27,6 +28,7 @@ const App = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="forgot-password" element={<ForgotPassword />} />
+                <Route path="new-password" element={<NewPaswword />} />
             </Routes>
         </div>
     );

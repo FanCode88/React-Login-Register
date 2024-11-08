@@ -8,6 +8,8 @@ import { RiLockPasswordFill } from 'react-icons/ri';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [isFocusedEmail, setIsFocusedEmail] = useState(false);
+    const [isFocusedPassword, setIsFocusedPasword] = useState(false);
 
     const navigate = useNavigate();
 
@@ -17,7 +19,7 @@ const Login = () => {
         console.log('Email:', email);
         console.log('Password:', password);
 
-        navigate('/dashboard');
+        navigate('/');
     };
 
     return (
@@ -32,8 +34,12 @@ const Login = () => {
                     <h2>Sign In</h2>
                     <div className="input-box">
                         <input
-                            placeholder="Email"
+                            placeholder={
+                                isFocusedEmail ? 'Typing...' : 'Enter Email...'
+                            }
                             type="email"
+                            onFocus={() => setIsFocusedEmail(true)}
+                            onBlur={() => setIsFocusedEmail(false)}
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
@@ -42,8 +48,14 @@ const Login = () => {
                     </div>
                     <div className="input-box">
                         <input
-                            placeholder="Password"
+                            placeholder={
+                                isFocusedPassword
+                                    ? 'Typing...'
+                                    : 'Enter Password...'
+                            }
                             type="password"
+                            onFocus={() => setIsFocusedPasword(true)}
+                            onBlur={() => setIsFocusedPasword(false)}
                             required
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}

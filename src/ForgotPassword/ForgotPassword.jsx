@@ -1,8 +1,22 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './forgotPassword.scss';
 import { MdEmail } from 'react-icons/md';
+import { useState } from 'react';
 
 const ForgotPassword = () => {
+    const [isFocusedEmail, setIsFocusedEmail] = useState(false);
+    const [email, setEmail] = useState('');
+
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log('Email:', email);
+
+        navigate('/new-password');
+    };
+
     return (
         <div className="forgotPassword">
             <div className="container">
@@ -13,9 +27,19 @@ const ForgotPassword = () => {
                 </Link>
                 <h2>Forgot Password</h2>
                 <p>Enter your email address to reset your password.</p>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="inputBox">
-                        <input type="email" placeholder="Email" required />
+                        <input
+                            placeholder={
+                                isFocusedEmail ? 'Typing...' : 'Enter Email...'
+                            }
+                            type="email"
+                            onFocus={() => setIsFocusedEmail(true)}
+                            onBlur={() => setIsFocusedEmail(false)}
+                            required
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
                         <MdEmail className="iconEmail" />
                     </div>
                     <button type="submit">Reset Password</button>

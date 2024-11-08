@@ -10,6 +10,10 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const [isFocusUser, setIsFocusUser] = useState(false);
+    const [isFocusedEmail, setIsFocusedEmail] = useState(false);
+    const [isFocusedPassword, setIsFocusedPasword] = useState(false);
+
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -19,7 +23,7 @@ const Register = () => {
         console.log('Email:', email);
         console.log('Password:', password);
 
-        navigate('/dashboard');
+        navigate('/');
     };
 
     return (
@@ -35,8 +39,12 @@ const Register = () => {
                     <div className="input-box">
                         <input
                             type="text"
+                            placeholder={
+                                isFocusUser ? 'Typing...' : 'Enter Username...'
+                            }
+                            onFocus={() => setIsFocusUser(true)}
+                            onBlur={() => setIsFocusUser(false)}
                             required
-                            placeholder="Username"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                         />
@@ -45,8 +53,12 @@ const Register = () => {
                     <div className="input-box">
                         <input
                             type="email"
+                            placeholder={
+                                isFocusedEmail ? 'Typing...' : 'Enter Email...'
+                            }
+                            onFocus={() => setIsFocusedEmail(true)}
+                            onBlur={() => setIsFocusedEmail(false)}
                             required
-                            placeholder="Email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
@@ -55,8 +67,14 @@ const Register = () => {
                     <div className="input-box">
                         <input
                             type="password"
+                            placeholder={
+                                isFocusedPassword
+                                    ? 'Typing...'
+                                    : 'Enter Password...'
+                            }
+                            onFocus={() => setIsFocusedPasword(true)}
+                            onBlur={() => setIsFocusedPasword(false)}
                             required
-                            placeholder="Password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />

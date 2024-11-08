@@ -9,17 +9,16 @@
         width: 400px;
         padding: 50px;
         border-radius: 10px;
-        box-shadow: 0px 0px 22px 9px rgba(173, 255, 47, 0.63);
         backdrop-filter: blur(15px);
         display: flex;
         align-items: center;
         justify-content: center;
+        box-shadow: 0px 0px 22px 9px rgba(91, 231, 169, 0.33);
 
         .close {
             position: absolute;
             width: 40px;
             height: 40px;
-            border: 2px solid rgba(173, 255, 47, 0.6);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -27,18 +26,19 @@
             right: 0;
             border-top-right-radius: 10px;
             border-bottom-left-radius: 10px;
+            border: 2px solid rgba(91, 231, 169, 0.6);
 
             .closeInput {
                 font-size: 32px;
                 position: absolute;
-                color: greenyellow;
+                color: #5be7a9;
                 cursor: pointer;
                 font-weight: bold;
             }
             }
 
         h2 {
-            color: greenyellow;
+            color: lightcyan;
             text-align: center;
             font-size: 36px;
         }
@@ -65,15 +65,15 @@
                     border: none;
                     background: transparent;
                     font-size: 16px;
-                    color: #fff;
+                    color: lightcyan;
                     font-weight: bold;
-                    border: 2px solid greenyellow;
-                    box-shadow: 0px 0px 22px 9px rgba(0,0,0,0.33);
+                    border: 2px solid #5be7a9;
+                    box-shadow: 0px 0px 22px 9px rgba(91, 231, 169, 0.33);
                     border-radius: 5px;
                     outline: none;
 
                     &::placeholder {
-                        color: greenyellow;
+                        color: lightcyan;
                     }
                 }
             }
@@ -81,7 +81,7 @@
             .btn {
                 width: 100%;
                 height: 35px;
-                background: greenyellow;
+                background: #5be7a9;
                 border: none;
                 color: #000;
                 font-size: 16px;
@@ -92,15 +92,15 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                box-shadow: 0px 0px 22px 9px rgba(173, 255, 47, 0.33);
+                box-shadow: 0px 0px 22px 9px rgba(91, 231, 169, 0.33);
 
                 &:hover {
-                    background: #008000;
-                    color: #fff;
+                    background: #03502d85;
+                    color: lightcyan;
                 }
             }
             .remember-forgot {
-                color: #fff;
+                color: lightcyan;
                 display: flex;
 
                 input {
@@ -113,17 +113,17 @@
             .loginRegister {
 
                 p {
-                    color: #fff;
+                    color: lightcyan;
                 }
 
                 .loginLink {
                     text-decoration: none;
-                    color: #fff;
+                    color: lightcyan;
                     font-weight: bold;
                     margin-left: 10px;
 
                     &:hover {
-                        color: greenyellow;
+                        color: #5be7a9;
                         text-decoration: underline;
                     }
                 }
@@ -131,10 +131,9 @@
 
             .iconUser {
                 font-size: 23px;
-                color: #fff;
+                color: lightcyan;
                 position: absolute;
                 right: 10px;
-                color: greenyellow;
             }
 
         }
