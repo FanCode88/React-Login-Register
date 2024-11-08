@@ -2,7 +2,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background: url(../img/m.jpg);
+    background: url(../../public/img/m.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -23,7 +23,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: relative; 
 
     .close {
         position: absolute;

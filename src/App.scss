@@ -24,18 +24,19 @@
 
     button {
         padding: 15px 35px;
-        background: transparent;
+        // background: transparent;
         border-radius: 5px;
-        border: 2px solid greenyellow;
+        // border: 2px solid greenyellow;
         outline: none!important;
-        color: greenyellow;
+        // color: greenyellow;
         font-size: 17px;
         font-weight: bold;
         cursor: pointer;
+        color: #fff;
+        background: linear-gradient(45deg, #8e44ad, #e74c3c, #2ecc71);
 
         &:hover {
-            background: greenyellow;
-            color: #000;
+            background: linear-gradient(45deg, #27ae60, #e74c3c, #9b59b6);
         }
     }
 }
