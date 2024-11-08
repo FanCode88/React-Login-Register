@@ -40,7 +40,6 @@ body {
 
         .closeInput {
             font-size: 32px;
-            position: absolute;
             color: greenyellow;
             cursor: pointer;
             font-weight: bold;
@@ -60,6 +59,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    width: 100%;
 
 
     .input-box {

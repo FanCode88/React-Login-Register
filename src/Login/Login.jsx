@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './login.scss';
-import { FaUser } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import { RiLockPasswordFill } from 'react-icons/ri';
 
 const Login = () => {
@@ -38,7 +38,7 @@ const Login = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        <FaUser className="iconUser" />
+                        <MdEmail className="iconUser" />
                     </div>
                     <div className="input-box">
                         <input

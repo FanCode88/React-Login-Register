@@ -4,6 +4,7 @@ import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import Login from './Login/Login';
 import Register from './Register/Register';
 import './App.scss';
+import ForgotPassword from './ForgotPassword/ForgotPassword';
 
 const App = () => {
     const location = useLocation();
@@ -25,6 +26,7 @@ const App = () => {
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="forgot-password" element={<ForgotPassword />} />
             </Routes>
         </div>
     );
