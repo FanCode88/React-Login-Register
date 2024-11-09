@@ -48,7 +48,7 @@ const NewPassword = () => {
     return (
         <div className="newPassword">
             <div className="formPassword">
-                <Link to="/">
+                <Link to="/login">
                     <div className="close">
                         <div className="closeInput">x</div>
                     </div>
