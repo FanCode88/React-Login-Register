@@ -25,11 +25,10 @@ body {
     position: relative;
     box-shadow: 0px 0px 22px 9px rgba(91, 231, 169, 0.33);
 
-
     .close {
         position: absolute;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         border: 2px solid rgba(91, 231, 169, 0.6);
         display: flex;
         align-items: center;
@@ -38,12 +37,23 @@ body {
         right: 0;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 10px;
+        transition: .2s ease-in;
+
+        &:hover {
+            background-color: lightcyan;
+          }
 
         .closeInput {
-            font-size: 32px;
+            font-size: 34px;
             color: #5be7a9;
             cursor: pointer;
             font-weight: bold;
+            z-index: 1;
+            transition: .2s ease-in;
+
+            &:hover {
+                color: #000;
+              }
         }
         }
 
@@ -53,15 +63,12 @@ body {
         text-align: center;
     }
 
-
-
     form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
     width: 100%;
-
 
     .input-box {
         width: 100%;
@@ -110,14 +117,15 @@ body {
         justify-content: center;
         align-items: center;
         box-shadow: 0px 0px 22px 9px rgba(91, 231, 169, 0.33);
-
-
+        transition: .5s all ease-in-out;
 
         &:hover {
-            background: #03502d85;
+            background: #2c786c;
             color: lightcyan;
+            box-shadow: 0px 0px 22px 9px rgba(54, 98, 106, 0.33);
         }
     }
+
     .remember-forgot {
         color: lightcyan;
         display: flex;
@@ -146,9 +154,11 @@ body {
 
     .login-register {
         display: flex;
+
         p {
             color: lightcyan;
         }
+
         h6 {
             color: lightcyan;
             font-size: 16px;
@@ -160,6 +170,7 @@ body {
                 text-decoration: underline;
             }
         }
+
         .register-link {
             text-decoration: none;
         }

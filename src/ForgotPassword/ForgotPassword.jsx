@@ -6,14 +6,11 @@ import { useState } from 'react';
 const ForgotPassword = () => {
     const [isFocusedEmail, setIsFocusedEmail] = useState(false);
     const [email, setEmail] = useState('');
-
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         console.log('Email:', email);
-
         navigate('/new-password');
     };
 

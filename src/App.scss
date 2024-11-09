@@ -4,7 +4,7 @@
     justify-content: space-around;
     margin-top: 40px;
 
-    h1{
+    h1 {
         letter-spacing: 2px;
         cursor: default;
         font-size: 42px;
@@ -13,13 +13,10 @@
         -webkit-background-clip: text;
         color: transparent;
 
-        &:hover{
+        &:hover {
             color: transparent;
             background-image: linear-gradient(135deg, #2ecc71, #e74c3c, #8e44ad);
         }
-    }
-    h6 {
-        color: red;
     }
 
     button {
@@ -27,11 +24,12 @@
         border-radius: 5px;
         outline: none!important;
         border: none;
-        font-size: 17px;
+        font-size: 19px;
         font-weight: bold;
         cursor: pointer;
-        color: #fff;
+        color: lightcyan;
         background: linear-gradient(45deg, #8e44ad, #e74c3c, #2ecc71);
+
 
         &:hover {
             background: linear-gradient(45deg, #27ae60, #e74c3c, #9b59b6);
