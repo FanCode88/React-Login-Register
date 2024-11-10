@@ -2,9 +2,6 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background: url(../../public/img/m.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     overflow: hidden;
 }
 
@@ -13,6 +10,10 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-image: url(../../../public/img/m.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 .formLogin{
     width: 400px;

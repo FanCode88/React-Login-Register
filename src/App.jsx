@@ -1,34 +1,24 @@
 // App.jsx
 import React from 'react';
-import { Routes, Route, useLocation, Link } from 'react-router-dom';
-import Login from './Login/Login';
-import Register from './Register/Register';
-import './App.scss';
-import ForgotPassword from './ForgotPassword/ForgotPassword';
-import NewPaswword from './NewPassword/NewPassword';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Login from '../src/components/Login/Login';
+import Register from '../src/components/Register/Register';
+import ForgotPassword from '../src/components/ForgotPassword/ForgotPassword';
+import NewPaswword from '../src/components/NewPassword/NewPassword';
+import User from './components/User/UserPage';
+import Home from './components/Home/Home';
 
 const App = () => {
-    const location = useLocation();
-
     return (
-        <div className="app">
-            {location.pathname === '/' && (
-                <>
-                    <h1>Welcome to our page!</h1>
-                    <div className="wrapper">
-                        <div className="formboxLogin">
-                            <Link to="/login">
-                                <button>Login</button>
-                            </Link>
-                        </div>
-                    </div>
-                </>
-            )}
+        <div className="appContainer">
             <Routes>
+                <Route path="/" element={<Navigate to="/home" replace />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="forgot-password" element={<ForgotPassword />} />
                 <Route path="new-password" element={<NewPaswword />} />
+                <Route path="profile" element={<User />} />
             </Routes>
         </div>
     );

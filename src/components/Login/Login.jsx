@@ -1,16 +1,13 @@
+// Login.jsx
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './register.scss';
-import { FaUser } from 'react-icons/fa';
-import { RiLockPasswordFill } from 'react-icons/ri';
+import './login.scss';
 import { MdEmail } from 'react-icons/md';
+import { RiLockPasswordFill } from 'react-icons/ri';
 
-const Register = () => {
-    const [username, setUsername] = useState('');
+const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-    const [isFocusUser, setIsFocusUser] = useState(false);
     const [isFocusedEmail, setIsFocusedEmail] = useState(false);
     const [isFocusedPassword, setIsFocusedPasword] = useState(false);
 
@@ -19,43 +16,28 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log('Username:', username);
         console.log('Email:', email);
         console.log('Password:', password);
 
-        navigate('/');
+        navigate('/profile');
     };
 
     return (
-        <div className="register">
-            <div className="formRegister">
-                <Link to="/">
+        <div className="login">
+            <div className="formLogin">
+                <Link to="/home">
                     <div className="close">
                         <div className="closeInput">x</div>
                     </div>
                 </Link>
                 <form onSubmit={handleSubmit}>
-                    <h2>Sign Up</h2>
+                    <h2>Sign In</h2>
                     <div className="input-box">
                         <input
-                            type="text"
-                            placeholder={
-                                isFocusUser ? 'Typing...' : 'Enter Username...'
-                            }
-                            onFocus={() => setIsFocusUser(true)}
-                            onBlur={() => setIsFocusUser(false)}
-                            required
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                        />
-                        <FaUser className="iconUser" />
-                    </div>
-                    <div className="input-box">
-                        <input
-                            type="email"
                             placeholder={
                                 isFocusedEmail ? 'Typing...' : 'Enter Email...'
                             }
+                            type="email"
                             onFocus={() => setIsFocusedEmail(true)}
                             onBlur={() => setIsFocusedEmail(false)}
                             required
@@ -66,12 +48,12 @@ const Register = () => {
                     </div>
                     <div className="input-box">
                         <input
-                            type="password"
                             placeholder={
                                 isFocusedPassword
                                     ? 'Typing...'
                                     : 'Enter Password...'
                             }
+                            type="password"
                             onFocus={() => setIsFocusedPasword(true)}
                             onBlur={() => setIsFocusedPasword(false)}
                             required
@@ -82,20 +64,21 @@ const Register = () => {
                     </div>
                     <div className="remember-forgot">
                         <label>
-                            <input type="checkbox" /> I agree to the terms &
-                            conditions
+                            <input type="checkbox" />
+                            Remember me
                         </label>
+                        <Link to="/forgot-password" className="forgotPass">
+                            <p>Forgot password?</p>
+                        </Link>
                     </div>
                     <button type="submit" className="btn">
-                        Sign Up
+                        Sign In
                     </button>
-                    <div className="loginRegister">
-                        <p>
-                            Already have an account?
-                            <Link to="/login" className="loginLink">
-                                Sign In
-                            </Link>
-                        </p>
+                    <div className="login-register">
+                        <p>Don't have an account?</p>
+                        <Link to="/register" className="register-link">
+                            <h6>Sign Up</h6>
+                        </Link>
                     </div>
                 </form>
             </div>
@@ -103,4 +86,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default Login;

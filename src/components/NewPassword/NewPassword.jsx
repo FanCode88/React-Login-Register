@@ -20,7 +20,7 @@ const NewPassword = () => {
             if (password === confirmPassword) {
                 setIsPasswordChanged(true);
                 alert('The password has been changed successfully.');
-                navigate('/');
+                navigate('/profile');
             } else {
                 alert(
                     'Passwords do not match! Make sure you have entered the same password.'

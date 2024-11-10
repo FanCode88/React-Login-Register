@@ -17,7 +17,7 @@ const ForgotPassword = () => {
     return (
         <div className="forgotPassword">
             <div className="container">
-                <Link to="/">
+                <Link to="/home">
                     <div className="close">
                         <div className="closeInput">x</div>
                     </div>
