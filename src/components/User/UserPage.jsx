@@ -39,8 +39,8 @@ function UserPage() {
                     className="avatar"
                     style={{
                         backgroundImage: selectedImage
-                            ? 'url(/img/no.jpg)'
-                            : `url(${selectedImage})`,
+                            ? `url(${selectedImage})`
+                            : 'url(/img/no.jpg)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
