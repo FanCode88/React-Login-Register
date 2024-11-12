@@ -10,6 +10,9 @@ import Home from './components/Home/Home';
 import Services from './components/Services/Services';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Communications from './components/Communications/Communications';
+import InspiredDesign from './components/InspiredDesign/InspiredDesign';
+import HappyCustomers from './components/HappyCustomers/HappyCustomers';
 
 const App = () => {
     return (
@@ -25,6 +28,18 @@ const App = () => {
                 <Route path="/services" element={<Services />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route
+                    path="/services/communications"
+                    element={<Communications />}
+                />
+                <Route
+                    path="/services/inspired-design"
+                    element={<InspiredDesign />}
+                />
+                <Route
+                    path="/services/happy-customers"
+                    element={<HappyCustomers />}
+                />
             </Routes>
         </div>
     );
