@@ -3,7 +3,9 @@
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    background: #9fd3c7;
+    background: rgba(255, 255, 255, 0.4) url(../../../public/img/text.jpg);
+    background-blend-mode: overlay;
+
 
     .container {
         width: 500px;
