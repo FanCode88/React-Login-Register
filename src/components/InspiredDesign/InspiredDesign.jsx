@@ -26,7 +26,9 @@ const InspiredDesign = () => {
     const storedTheme = localStorage.getItem('theme');
     const [isDarkMode, setIsDarkMode] = useState(storedTheme === 'dark');
     const [isSubscribed, setIsSubscribed] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
 
+    // Trecerea între modurile de temă
     const toggleMode = () => {
         const newTheme = !isDarkMode ? 'dark' : 'light';
         setIsDarkMode(!isDarkMode);
@@ -35,6 +37,11 @@ const InspiredDesign = () => {
 
     const handleSubscribe = () => {
         setIsSubscribed(true);
+        setIsVisible(true);
+    };
+
+    const closeWindow = () => {
+        setIsVisible(false);
     };
 
     return (
@@ -119,10 +126,15 @@ const InspiredDesign = () => {
                     <button className="first-button" onClick={handleSubscribe}>
                         Submit
                     </button>
-                    {isSubscribed && (
-                        <p className="subscribe-message">
-                            Thanks for subscribing!
-                        </p>
+                    {isSubscribed && isVisible && (
+                        <div className="subscribe">
+                            <div className="subscribe-message">
+                                Thanks for subscribing!
+                                <div className="close" onClick={closeWindow}>
+                                    x
+                                </div>
+                            </div>
+                        </div>
                     )}
                     <Link to="/register">
                         <button>Sign Up</button>

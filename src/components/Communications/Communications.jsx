@@ -29,6 +29,10 @@ const Communications = () => {
         setFormData({ name: '', email: '', message: '' });
     };
 
+    const [isFocusUser, setIsFocusUser] = useState(false);
+    const [isFocusedEmail, setIsFocusedEmail] = useState(false);
+    const [isFocusedMesage, setIsFocusedMessage] = useState(false);
+
     return (
         <div className="comunications">
             <img src="/img/communications2.png" alt="" />
@@ -46,7 +50,11 @@ const Communications = () => {
                         <div className="form-group">
                             <label htmlFor="name"></label>
                             <input
-                                placeholder="Name"
+                                placeholder={
+                                    isFocusUser ? 'Typing...' : 'Enter name...'
+                                }
+                                onFocus={() => setIsFocusUser(true)}
+                                onBlur={() => setIsFocusUser(false)}
                                 type="text"
                                 id="name"
                                 name="name"
@@ -58,7 +66,13 @@ const Communications = () => {
                         <div className="form-group">
                             <label htmlFor="email"></label>
                             <input
-                                placeholder="Email"
+                                placeholder={
+                                    isFocusedEmail
+                                        ? 'Typing...'
+                                        : 'Enter Email...'
+                                }
+                                onFocus={() => setIsFocusedEmail(true)}
+                                onBlur={() => setIsFocusedEmail(false)}
                                 type="email"
                                 id="email"
                                 name="email"
@@ -70,7 +84,13 @@ const Communications = () => {
                         <div className="form-group">
                             <label htmlFor="message"></label>
                             <textarea
-                                placeholder="Enter your message..."
+                                placeholder={
+                                    isFocusedMesage
+                                        ? 'Typing...'
+                                        : 'Enter your message...'
+                                }
+                                onFocus={() => setIsFocusedMessage(true)}
+                                onBlur={() => setIsFocusedMessage(false)}
                                 id="message"
                                 name="message"
                                 value={formData.message}
