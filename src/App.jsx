@@ -3,16 +3,17 @@ import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from '../src/components/Login/Login';
 import Register from '../src/components/Register/Register';
-import ForgotPassword from '../src/components/ForgotPassword/ForgotPassword';
+import ForgotPassword from './../src/pages/ForgotPassword/ForgotPassword';
 import NewPaswword from '../src/components/NewPassword/NewPassword';
-import User from './components/User/UserPage';
+import User from './pages/User/UserPage';
 import Home from './components/Home/Home';
 import Services from './components/Services/Services';
 import About from './components/About/About';
-import Contact from './components/Contact/Contact';
-import Communications from './components/Communications/Communications';
-import InspiredDesign from './components/InspiredDesign/InspiredDesign';
-import HappyCustomers from './components/HappyCustomers/HappyCustomers';
+import Contact from './pages/Contact/Contact';
+import Communications from './pages/Communications/Communications';
+import InspiredDesign from './pages/InspiredDesign/InspiredDesign';
+import HappyCustomers from './pages/HappyCustomers/HappyCustomers';
+import Creativity from './pages/Creativity/Creativity';
 
 const App = () => {
     return (
@@ -40,6 +41,7 @@ const App = () => {
                     path="/services/happy-customers"
                     element={<HappyCustomers />}
                 />
+                <Route path="/about/creativity" element={<Creativity />} />
             </Routes>
         </div>
     );
