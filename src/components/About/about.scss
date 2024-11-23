@@ -1,6 +1,9 @@
 .about {
-    background: #9fd3c7;
-    color: #333;
+    background-image: url(../../../public/img/abus.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000;
     font-family: 'Arial', sans-serif;
     display: flex;
     align-items: center;
@@ -11,15 +14,20 @@
         max-width: 1200px;
         margin: 0 auto;
         text-align: center;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        backdrop-filter: blur(25px);
+        padding: 60px;
+        box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.33);
 
         .about-title {
-            font-size: 46px;
+            font-size: 56px;
             margin-bottom: 20px;
-            color: #222;
+            color: #000;
         }
 
         .about-description {
-            font-size: 1.2rem;
+            font-size: 21px;
             margin-bottom: 30px;
             line-height: 1.6;
         }
@@ -38,7 +46,7 @@
 
             .highlight-item {
                 background: transparent;
-                border: 2px solid #333;
+                border: 2px solid #fff;
                 border-radius: 8px;
                 padding: 20px;
                 width: 300px;
@@ -52,7 +60,7 @@
                 h3 {
                     font-size: 28px;
                     margin-bottom: 10px;
-                    color: #007bff;
+                    color: #000;
                     font-weight: bold;
                 }
 
@@ -60,7 +68,7 @@
                     font-size: 18px;
                     font-weight: bold;
                     line-height: 1.4;
-                    color: #333;
+                    color: #000;
                 }
             }
         }

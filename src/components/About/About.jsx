@@ -14,7 +14,7 @@ const About = () => {
                     want to turn your ideas into reality, we are here to help.
                 </p>
                 <div className="about-highlights">
-                    <Link className="creativity" to="creativity">
+                    <Link    className="creativity" to="creativity">
                         <div className="highlight-item">
                             <h3>Creativity</h3>
                             <p>

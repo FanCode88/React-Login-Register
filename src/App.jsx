@@ -14,6 +14,9 @@ import Communications from './pages/Communications/Communications';
 import InspiredDesign from './pages/InspiredDesign/InspiredDesign';
 import HappyCustomers from './pages/HappyCustomers/HappyCustomers';
 import Creativity from './pages/Creativity/Creativity';
+import Technology from './pages/Technology/Technology';
+import Collaboration from './pages/Collaboration/Collaboration';
+import DiscoverMore from './pages/DiscoverMore/DiscoverMore';
 
 const App = () => {
     return (
@@ -42,6 +45,15 @@ const App = () => {
                     element={<HappyCustomers />}
                 />
                 <Route path="/about/creativity" element={<Creativity />} />
+                <Route path="/about/technology" element={<Technology />} />
+                <Route
+                    path="/about/collaboration"
+                    element={<Collaboration />}
+                />
+                <Route
+                    path="/about/technology/more"
+                    element={<DiscoverMore />}
+                />
             </Routes>
         </div>
     );
